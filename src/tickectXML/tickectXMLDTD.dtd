@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    TODO define vocabulary identification
+    PUBLIC ID: -//vendor//vocabulary//EN
+    SYSTEM ID: http://server/path/tickectXMLDTD.dtd
+
+-->
+
+<!--
+    An example how to use this DTD from your XML document:
+
+    <?xml version="1.0"?>
+
+    <!DOCTYPE raiz SYSTEM "tickectXMLDTD.dtd">
+
+    <raiz>
+    ...
+    </raiz>
+-->
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT raiz (ticket|comercio|compra)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT ticket (fechaHora|precioTotal|formaPago)*>
+<!ATTLIST ticket
+    id CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT fechaHora (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT precioTotal (precioSinIvaTotal|cantidadIVA|total)*>
+<!ATTLIST precioTotal
+    moneda CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT precioSinIvaTotal (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT cantidadIVA (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT total (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT formaPago (efectivo|tarjeta)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT efectivo (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT tarjeta (tipo|numero|nombre)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT tipo (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT numero (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT nombre (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT comercio (nombre|direccion|NIT|telefono)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT direccion (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT NIT (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT telefono (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT compra (lineas_compra)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT lineas_compra (articulo|cantidad|precio_unitario|IVA)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT articulo (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT cantidad (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT precio_unitario (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT IVA (#PCDATA)>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<biblioteca>
+    <libro>
+        <titulo>La vida en otra parte</titulo>
+        <autor>Milan Kundera</autor>
+        <fechaPublicacion año="1973" />
+    </libro>
+    <libro>
+        <titulo>Pantalon y las visitadoras</titulo>
+        <autor fechaNacimiento="28/03/1936">Mario</autor>
+        <fechaPublicacion año="1973"/>
+    </libro>
+    <libro>
+        <titulo>Conversación en la catedral</titulo>
+        <autor fechaNacimiento="28/03/1936">Mario</autor>
+        <fechaPublicacion año="1969"/>
+    </libro>
+</biblioteca>

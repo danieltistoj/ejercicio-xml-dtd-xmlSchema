@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified">
+<xs:element name="raiz">
+    <xs:complexType>
+        <xs:sequence>
+        <xs:element name="tickeck">
+            <x:complexType>
+                <xs:sequence>
+                    <xs:choice maxOccurs="1" minOccurs="0">
+                        <xs:element name="fechaHora" type="xs:string"/>
+                        <xs:element name="precioTotal">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="precioSinIvaTotal" type="xs:float"/>
+                                    <xs:element name="cantidadIVA" type="xs:float"/>
+                                    <xs:element name="cantidad" type="xs:byte"/>
+                                </xs:sequence>
+                                <xs:attribute name="moneda" type="xs:string"/>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="fomaPago">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="efectivo" type="xs:int"/>
+                                    <xs:element name="tarjeta">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="Tarjeta" type="xs:string"/>
+                                                <xs:element name="numero" type="xs:string"/>
+                                                <xs:element name="nombre" type="xs:string"/>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:choice>
+                </xs:sequence>
+                <xs:attribute name="id" type="xs:byte"/>
+            </x:complexType>
+        </xs:element>
+        <xs:element name="comercio">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="nombre" type="xs:string"/>
+                    <xs:element name="direccion" type="xs:string"/>
+                    <xs:element name="NIT" type="xs:string"/>
+                    <xs:element name="telefono" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+        <xs:element name="compra">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="lineas_compra">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="articulo" type="xs:string"/>
+                                <xs:element name="cantidad" type="xs:byte"/>
+                                <xs:element name="precio_unitario" type="xs:byte"/>
+                                <xs:element name="IVA" type="xs:float"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+</xs:schema>

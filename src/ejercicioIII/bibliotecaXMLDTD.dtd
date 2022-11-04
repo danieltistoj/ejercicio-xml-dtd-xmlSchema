@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    TODO define vocabulary identification
+    PUBLIC ID: -//vendor//vocabulary//EN
+    SYSTEM ID: http://server/path/bibliotecaXMLDTD.dtd
+
+-->
+
+<!--
+    An example how to use this DTD from your XML document:
+
+    <?xml version="1.0"?>
+
+    <!DOCTYPE biblioteca SYSTEM "bibliotecaXMLDTD.dtd">
+
+    <biblioteca>
+    ...
+    </biblioteca>
+-->
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT biblioteca (libro)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT libro (titulo|autor|fechaPublicacion)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT titulo (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT autor (#PCDATA)>
+<!ATTLIST autor
+    fechaNacimiento CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT fechaPublicacion EMPTY>
+<!ATTLIST fechaPublicacion
+    año CDATA #IMPLIED
+  >

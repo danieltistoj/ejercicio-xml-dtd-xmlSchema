@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<raiz>
+    <ticket id="1234">
+        <fechaHora>28/10/2022 10:43</fechaHora>
+        <precioTotal moneda="quetzal">
+            <precioSinIvaTotal>50.23</precioSinIvaTotal>
+            <cantidadIVA>60.6</cantidadIVA>
+            <total>100</total>
+        </precioTotal>
+        <formaPago>
+            <efectivo>1000</efectivo>
+            <tarjeta>
+                <tipo>Tarjeta</tipo>
+                <numero>***********1234</numero>
+                <nombre>Juan Perez</nombre>
+            </tarjeta>
+        </formaPago>
+    </ticket>
+    <comercio>
+        <nombre>Comercio 1</nombre>
+        <direccion>direccion 1</direccion>
+        <NIT>123213</NIT>
+        <telefono>3242344</telefono>
+    </comercio>
+    <compra>
+        <lineas_compra>
+            <articulo>articulo</articulo>
+            <cantidad>3</cantidad>
+            <precio_unitario>56</precio_unitario>
+            <IVA>8.7</IVA>
+        </lineas_compra>
+    </compra>
+</raiz>
